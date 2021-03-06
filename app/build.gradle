@@ -5,7 +5,7 @@ apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.1"
+    buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "com.treinamento"
@@ -36,6 +36,13 @@ android {
 }
 
 dependencies {
+    def lifecycle_version = "2.3.0"
+
+     // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
 
     // General
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
